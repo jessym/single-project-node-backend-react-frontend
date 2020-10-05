@@ -9,6 +9,7 @@
     "build": "yarn build:server && yarn build:client",
     "build:server": "rimraf ./build && tsc",
     "build:client": "cd client && yarn && yarn export && mv out ../build/static/",
+    "heroku-postbuild": "yarn build:server && yarn build:client",
     "start": "node build/server.js"
   },
   "author": "Jessy",
